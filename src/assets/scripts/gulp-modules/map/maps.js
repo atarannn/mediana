@@ -4,6 +4,7 @@ import { MARKER_ICONS, MAP_ICONS_NAME } from './iconsMap';
 import { mapsFiltersView } from './mapsFiltersView';
 
 const mapSrc = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCEsxqoFPdtHTTKJI8iznM1kMk6wxpyjUM&ver=1655409542';
+// const mapSrc = 'https://maps.googleapis.com/maps/api/js';
 
 const mapScript = document.createElement('script');
 mapScript.src = mapSrc;
@@ -22,7 +23,7 @@ async function initMap() {
   } catch (error) {
     console.warn(error);
   }
-
+  console.log(markers);
   const locations = markers.flatMap((item, i) => item.list.map((marker, index) => {
     const { coordinations, name } = marker;
     return {
@@ -51,7 +52,7 @@ async function initMap() {
     icon: MARKER_ICONS.main,
   });
   const DIRECTIONS_SERVIE = new google.maps.DirectionsService();
-  const DIRECTIONS_RENDERER = new google.maps.DirectionsRenderer({ map });
+  const DIRECTIONS_RENDERER = new google.maps.DirectionsRenderer({ map, polylineOptions: { strokeColor: "#E17427" } });
   const locationsWithMarkers = locations.map((item) => {
     const iconUrl = MARKER_ICONS[item.type];
     const marker = new google.maps.Marker({
@@ -60,7 +61,10 @@ async function initMap() {
         lng: +item.coords[1],
       },
       map,
-      icon: iconUrl,
+      icon: {
+        url: item.link ? item.link : iconUrl,
+        scaledSize: new google.maps.Size(40, 53)
+      },
       title: item.title,
     });
     marker.addListener('click', () => {
@@ -116,7 +120,8 @@ async function initMap() {
   const renderMapFilters = (markers) => {
     const filters = markers.map((marker) => {
       const { code, name } = marker;
-      return { svgName: MAP_ICONS_NAME[code], type: code, name };
+      const url = marker.svg ? marker.svg.url : null;
+      return { svgName: MAP_ICONS_NAME[code], type: code, name, url: url};
     });
     mapFiltersRef.innerHTML = mapsFiltersView(filters);
   };
