@@ -24,15 +24,15 @@ async function initMap() {
     console.warn(error);
   }
   console.log(markers);
-  const locations = markers.flatMap((item, i) => item.list.map((marker, index) => {
+  const locations = markers.flatMap((item, i) => item.list ? item.list.map((marker, index) => {
     const { coordinations, name } = marker;
     return {
       type: item.code,
       title: name,
-      link: markers[i].svgMarker ? markers[i].svgMarker.url : null,
+      link: markers[i].svgmarker ? markers[i].svgmarker.url : null,
       coords: [coordinations[0].latitude, coordinations[0].elevation],
     };
-  }));
+  }) : []);
   const mainMarker = {
     type: 'main',
     coords: [45.7219364, 16.0523063],
