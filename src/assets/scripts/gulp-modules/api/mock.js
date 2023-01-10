@@ -5,10 +5,13 @@ export const mapMock = [
     list: [
       {
         name: 'Text',
-        coordinations: {
-          latitude: '45.7991786',
-          elevation: '6.1019396',
-        },
+        /**Сделано в массиве из за ошибки в выводе на медиане данных с ВП */
+        coordinations: [
+          {
+            latitude: '45.7991786',
+            elevation: '6.1019396',
+          }
+        ],
       }
     ],
   },

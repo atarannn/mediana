@@ -29,7 +29,7 @@ async function initMap() {
       type: item.code,
       title: name,
       link: markers[i].svgMarker ? markers[i].svgMarker.url : null,
-      coords: [coordinations.latitude, coordinations.elevation],
+      coords: [coordinations[0].latitude, coordinations[0].elevation],
     };
   }));
   const mainMarker = {
