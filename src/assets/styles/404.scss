@@ -93,6 +93,12 @@
       font-size: 128px;
       text-align: center;
       width: 70%;
+      @include to(1024px) {
+        font-size: 76px;
+      }
+      @include to(680px) {
+        font-size: 48px;
+      }
     }
   }
 }
