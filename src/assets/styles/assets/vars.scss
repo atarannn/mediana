@@ -1,0 +1,154 @@
+$default-font: "AvenirNextCyr", sans-serif;
+$default-font2: "AvenirNextCyr-Medium", sans-serif;
+
+$wc: #F9F9F9;
+$bc: #221C35;
+$green: #A1A468;
+$orange: #F18A00;
+$grey: #7B7B7B;
+
+:root {
+  --field: 20px;
+
+  --offset-60: 60px;
+  --offset-100: 100px;
+  --offset-120: 120px;
+  --offset-140: 140px;
+  --footer-top-offset: 150px;
+
+  --blocks-offset-20: 20px;
+  --blocks-offset-40: 40px;
+  --blocks-offset-50: 50px ;
+  --blocks-offset-70: 70px ;
+
+  --breadcrumbs-offset: 60px;
+
+  --header-h: 100px;
+  --header-offset: 40px;
+
+  --footer-logo-h: 554px;
+
+  --btn-h: 60px;
+  --btn-w: 270px;
+
+  --menu-font: 86px;
+  --title-font: 56px;
+  --title-font-2: 48px;
+  --font16: 16px;
+  --font20: 20px;
+  --font24: 24px;
+  --footer-font: 24px;
+
+  --img-h: 700px;
+}
+
+@media screen and (max-width: 1440px){
+  :root {
+    --field: 20px;
+
+    --offset-60: 60px;
+    --offset-100: 80px;
+    --offset-120: 80px;
+    --offset-140: 80px;
+    --footer-top-offset: 100px;
+
+    --blocks-offset-20: 20px;
+    --blocks-offset-40: 20px;
+    --blocks-offset-50: 30px ;
+    --blocks-offset-70: 50px ;
+
+    --breadcrumbs-offset: 40px;
+
+    --header-h: 80px;
+    --header-offset: 20px;
+
+    --footer-logo-h: 400px;
+
+    --btn-h: 50px;
+    --btn-w: 230px;
+
+    --menu-font: 70px;
+    --title-font: 48px;
+    --title-font-2: 28px;
+    --font16: 14px;
+    --font20: 16px;
+    --font24: 18px;
+    --footer-font: 18px;
+
+    --img-h: 550px;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  :root {
+    --field: 10px;
+
+    --offset-60: 50px;
+    --offset-100: 60px;
+    --offset-120: 30px;
+    --offset-140: 40px;
+    --footer-top-offset: 60px;
+
+    --blocks-offset-20: 10px;
+    --blocks-offset-40: 20px;
+    --blocks-offset-50: 20px ;
+    --blocks-offset-70: 30px ;
+
+    --breadcrumbs-offset: 40px;
+
+    --header-h: 80px;
+    --header-offset: 10px;
+
+    --footer-logo-h: 250px;
+
+    --btn-h: 40px;
+    --btn-w: 180px;
+
+    --menu-font: 48px;
+    --title-font: 48px;
+    --title-font-2: 32px;
+    --font16: 12px;
+    --font20: 16px;
+    --font24: 18px;
+    --footer-font: 18px;
+
+    --img-h: 600px;
+  }
+}
+
+@media screen and (max-width: 680px){
+  :root {
+    --field: 10px;
+
+    --offset-60: 30px;
+    --offset-100: 40px;
+    --offset-120: 10px;
+    --offset-140: 10px;
+    --footer-top-offset: 40px;
+
+    --blocks-offset-20: 10px;
+    --blocks-offset-40: 20px;
+    --blocks-offset-50: 20px ;
+    --blocks-offset-70: 30px ;
+
+    --breadcrumbs-offset: 40px;
+
+    --header-h: 60px;
+    --header-offset: 10px;
+
+    --footer-logo-h: 100px;
+
+    --btn-h: 40px;
+    --btn-w: 180px;
+
+    --menu-font: 32px;
+    --title-font: 28px;
+    --title-font-2: 24px;
+    --font16: 12px;
+    --font20: 16px;
+    --font24: 18px;
+    --footer-font: 18px;
+
+    --img-h: 360px;
+  }
+}

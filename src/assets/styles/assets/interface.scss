@@ -1,0 +1,253 @@
+.page__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  min-height: 100vh;
+  height: auto;
+  background: $wc;
+  background-blend-mode: overlay;
+  overflow-x: hidden;
+	.page__content {
+		flex-grow: 1;
+	}
+	.page__footer-wrapper {
+		flex-shrink: 0;
+	}
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 var(--offset-140);
+  margin-top: var(--header-h);
+  section {
+    width: 100%;
+  }
+}
+
+.fields {
+  padding: 0 var(--field);
+}
+
+.divider {
+  width: 100%;
+  height: auto;
+  margin: var(--offset-100) 0;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  @include to(680px) {
+    height: 50px;
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.btn {
+  height: var(--btn-h);
+  width: var(--btn-w);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $green;
+  cursor: pointer;
+  span {
+    color: $wc;
+    @include font-medium;
+    text-transform: uppercase;
+    font-size: var(--font16);
+    line-height: 110%;
+  }
+}
+
+.btn-2 {
+  height: var(--btn-h);
+  width: var(--btn-w);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $bc;
+  cursor: pointer;
+  span {
+    color: $wc;
+    @include font-medium;
+    text-transform: uppercase;
+    font-size: var(--font16);
+    line-height: 110%;
+  }
+}
+
+.dark-title {
+  color: $bc;
+  @include font-regular;
+  text-transform: uppercase;
+  font-size: var(--title-font);
+  line-height: 100%;
+}
+
+.dark-title-2 {
+  color: $bc;
+  @include font-regular;
+  text-transform: uppercase;
+  font-size: var(--title-font-2);
+  line-height: 100%;
+}
+
+.light-title {
+  color: $wc;
+  @include font-regular;
+  text-transform: uppercase;
+  font-size: var(--title-font);
+  line-height: 100%;
+}
+
+.dark-text-16 {
+  color: $bc;
+  @include font-medium;
+  text-transform: uppercase;
+  font-size: var(--font16);
+  line-height: 110%;
+  letter-spacing: -0.05em;
+}
+
+.dark-text-20 {
+  color: $bc;
+  @include font-medium;
+  text-transform: uppercase;
+  font-size: var(--font20);
+  line-height: 110%;
+  letter-spacing: -0.05em;
+}
+
+.dark-text-24 {
+  color: $bc;
+  @include font-medium;
+  text-transform: uppercase;
+  font-size: var(--font24);
+  line-height: 100%;
+  letter-spacing: -0.05em;
+}
+
+.subtitle-text-20 {
+  color: $bc;
+  @include font-regular;
+  text-transform: none;
+  font-size: var(--font20);
+  line-height: 110%;
+  letter-spacing: -0.05em;
+}
+
+.page-text {
+  color: $grey;
+  @include font-regular;
+  text-transform: none;
+  font-size: var(--font20);
+  line-height: 110%;
+  letter-spacing: -0.05em;
+}
+
+.desk {
+  display: flex;
+  @include to(1024px) {
+    display: none;
+  }
+}
+
+.mob {
+  display: none;
+  @include to(1024px) {
+    display: flex;
+  }
+}
+
+.link-hover {
+  @include from(1023px) {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-top: 1px solid;
+      border-top-color: $bc;
+      transition: width 0.3s linear;
+    }
+    &:hover {
+      cursor: pointer;
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.dark-btn-hover {
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  transform: translateZ(0);
+  span {
+    position: relative;
+    display: block;
+  }
+  &:before {
+    content: '';
+    background: $bc;
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+    transform-origin: 100% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  @include from(1023px) {
+    transform: translateZ(0);
+    &:hover {
+      cursor: pointer;
+      &:before {
+        transform: scale3d(0,1,1);
+        transform-origin: 0% 50%;
+      }
+    }
+  }
+}
+
+.light-btn-hover {
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  transform: translateZ(0);
+  span {
+    position: relative;
+    display: block;
+  }
+  &:before {
+    content: '';
+    background: $green;
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+    transform-origin: 100% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  @include from(1023px) {
+    transform: translateZ(0);
+    &:hover {
+      cursor: pointer;
+      &:before {
+        transform: scale3d(0,1,1);
+        transform-origin: 0% 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+extends ../layout/main
+block variable
+  -
+    var title_page = '404'
+    var id_page = 'id-page-404'
+    var class_page = 'class-page-404'
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+  link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/sideform.js')
+block content
+  .page-404-wrapper
+    .bg
+      img(src="./assets/images/divider/1.jpg")
+    .page-404-info
+      img(src="./assets/images/404/1.png")
+      .page-404-info-right
+        img(src="./assets/images/404/404.svg")
+        .dark-text-24.title There is no such page.
+        .dark-text-24.subtitle Start with the main or see what apartments we offer
+        .page-404-btn-wrapper
+          a(href="index.html").btn.dark-btn-hover
+            span Home page
+          a(href="#").btn.dark-btn-hover
+            span Choose an apartment
+
+
+block header
+  include ../includes/header.pug

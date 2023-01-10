@@ -1,0 +1,62 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'contacts'
+    var id_page = 'id-page-contacts'
+    var class_page = 'class-page-contacts'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Контакти',
+        link: pagesLink[0].contacts
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/sideform.js')
+  script(defer src='./assets/scripts/text-animation.js')
+  script(defer src='./assets/scripts/map.js')
+
+block content
+   .page-wrapper
+      include ../components/breadcrumbs/breadcrumbs.pug
+      section.section-6
+        .section-6-left
+          ul.section-6-left-info
+            li
+              a(href="#").dark-text-20.link-hover
+                span Croatia, AVTO ARAZI STR. #42
+            li
+              .dark-text-20.col
+                span Пн-Сб:	с 09:00 до 18:00
+                span Вс:  выходной
+            li
+              a(href="tel:+995322552277").dark-text-20.link-hover
+                span (+995) 32 255 22 77
+            li
+              a(href="mailto:sales@mediana.com").dark-text-20.link-hover
+                span SALES@mediana.com
+            li.row
+              a(href="#").dark-text-20.link-hover
+                span instagram
+              a(href="#").dark-text-20.link-hover
+                span facebook
+        .section-6-right.map
+          #map(width="930px" height="800px")
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

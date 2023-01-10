@@ -1,0 +1,87 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'news-page'
+    var id_page = 'id-page-news-page'
+    var class_page = 'class-page-news-page'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Встигніть здійснити бажання про власне житло! Продаж квартир у нашому жк відкрито!',
+        link: pagesLink[0].news-page
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/sideform.js')
+  script(defer src='./assets/scripts/text-animation.js')
+  script(defer src='./assets/scripts/news-page.js')
+block content
+  .follow-back#go-back
+    .follow-back-icon
+      <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 13L2 7L8 1" stroke="#F9F9F9" stroke-width="2"/>
+      </svg>
+    .text назад
+  .page-wrapper
+    include ../components/breadcrumbs/breadcrumbs.pug
+    .news-page
+      .dark-text-16 23/09/2021
+      .img
+        img(src="./assets/images/news/1-1.jpg")
+      .news-page-text
+        p Анонсируем открытие отдела продаж нового комплекса название комплекса!
+        p Ждем вас 11 и 12 декабря с 11:00 по адресу: Название улицы, 6 – вдоль улицы Изюмской.
+        ul По случаю открытия вас будут ждать:
+          li большой выбор планировок;
+          li особые условия для покупки и рассрочки;
+          li самая актуальная информация о комплексе и преимуществах локации;
+          li розыгрыш техники от Apple среди первых инвесторов! 
+        p Лаванда Парк — современный жилой комплекс на Демеевке, который воплощается в концепции «город в городе» и будет иметь реку на территории. Это совместный проект девелопера имя девелопера в партнерстве с девелопер 1 и девелопер 2 – команды практиков, архитекторов, инженеров и новаторов.
+        p Точная локация отдела продаж -
+          a(href="https://goo.gl/maps/wLzdzrsdaejmP2f3kHW9") https://goo.gl/maps/wLzdzrsdaejmP2f3kHW9
+        p Ждем вас на открытии!
+      .img
+        img(src="./assets/images/news/1-2.jpg")
+      a(href="#").btn-2.light-btn-hover
+        span Обрати квартиру
+    .last-news
+      .dark-title останні новини та акції
+      .news-list
+        a(href="#").news-card.news
+          .img
+            img(src="./assets/images/news/2.jpg")
+          .news-card-info
+            .news-card-info-data 23/09/2021
+            .dark-text-20 Открытие отдела продаж ЖК лаванда парк!
+        a(href="#").news-card.news
+          .img
+            img(src="./assets/images/news/3.jpg")
+          .news-card-info
+            .news-card-info-data 23/09/2021
+            .dark-text-20 Встигніть здійснити бажання про власне житло! Продаж квартир у нашому жк відкрито!
+        a(href="#").news-card.action
+          .img
+            img(src="./assets/images/news/4.jpg")
+          .news-card-info
+            .news-card-info-data 23/09/2021
+            .dark-text-20 Графік роботи відділу продажу на свята! встигніть прибати квартиру до нового року
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

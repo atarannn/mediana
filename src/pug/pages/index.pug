@@ -1,0 +1,183 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'home'
+    var id_page = 'home-page'
+    var class_page = 'home'
+
+    var slider = [{
+      img: 'home/section-1/1.jpg',
+      title: 'Feel the balance',
+      text: 'Головне в житті зберігати баланс: комфортне місце, далеко від дисбалансу та крайнощів',
+      url: '',
+      linkText: 'дізнатись про проект',
+    }, {
+      img: 'home/section-1/1.jpg',
+      title: 'Feel the balance',
+      text: 'Головне в житті зберігати баланс: комфортне місце, далеко від дисбалансу та крайнощів',
+      url: '',
+      linkText: 'дізнатись про проект',
+    }]
+
+block meta
+  title= 'Главная'
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/sideform.js')
+  script(defer src='./assets/scripts/map.js')
+  script(defer src='./assets/scripts/hover-animation.js')
+  script(defer src='./assets/scripts/text-animation.js')
+  script(defer src='./assets/scripts/home-slider.js')
+  script(defer src='./assets/scripts/sketch.js')
+  script(defer src='./assets/scripts/three.js')
+  script(defer src='./assets/scripts/StretchEffect.js')
+  script(defer src='./assets/scripts/EffectShell.js')
+
+block content
+  section.section-1.home-slider.swiper-container
+    .swiper-wrapper
+      each sl in slider
+        .swiper-slide
+          .swiper-slide__left
+            .swiper-slide__title.dark-title=sl.title
+            .swiper-slide__text.subtitle-text-20= sl.text
+            a(href= sl.url).swiper-slide__link.link-hover
+              .dark-text-16= sl.linkText
+              .swiper-slide__link__arrow
+                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-3.63052e-07 21L5.54887e-07 -8.74228e-07L20 10.4806L-3.63052e-07 21Z"/>
+                </svg>
+          .swiper-slide__right
+            +img(sl.img)
+      .animation-for-slider
+    .slider__amount
+      .slider__current.js-slider__current(data-current)
+        span(data-first-digit)
+        span(data-second-digit)
+      span.slider__all.js-slider__all(data-total)
+    .slider__arrows
+      .slider__prev(data-prev)
+        <svg width="52" height="13" viewBox="0 0 52 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 12.2039L0.481408 6.50008L7 0.796318L7 5.50009L52 5.50009L52 7.50009L7 7.50009L7 12.2039Z"/>
+        </svg>
+      .slider__next(data-next)
+        <svg width="52" height="13" viewBox="0 0 52 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M45 12.2039L51.5186 6.50008L45 0.796318L45 5.50009L-5.86062e-07 5.50009L-4.11216e-07 7.50009L45 7.50009L45 12.2039Z"/>
+        </svg>
+    .slider__autoplayLine
+      svg(width="450" height="2" viewBox="0 0 450 2" fill="none" xmlns="http://www.w3.org/2000/svg")
+        line(x1="0" y1="2" x2="450" y2="2" stroke-width="5")
+        line(data-line  x1="0" x2="450" y1="2" y2="2" stroke-width="5" style="transition: none 0s ease 0s;")
+  .divider
+    img(src="./assets/images/divider/1.jpg")
+  section.section-2.fields
+    .card-style.js-hover-card-animation
+      .content
+        .light-title Про проєкт
+        .subtitle-text-20 Головне в житті зберігати баланс: комфортне місце, далеко від дисбалансу та крайнощів
+        a(href="#").btn.dark-btn-hover
+          span Дивитися сторінку
+    .card-style.js-hover-card-animation2
+      .content
+        .dark-title Інфраструктура
+        .subtitle-text-20 Головне в житті зберігати баланс: комфортне місце, далеко від дисбалансу та крайнощів
+        a(href="#").btn.dark-btn-hover
+          span Дивитися сторінку
+  .divider
+    img(src="./assets/images/divider/2.jpg")
+  section.section-3.fields
+    .section-3-left
+      img(src="./assets/images/home/section-3/2.jpg")
+      img(src="./assets/images/home/section-3/3.jpg")
+    .section-3-right
+      img(src="./assets/images/home/section-3/1.jpg")
+      .section-3-right-info
+        .dark-title Планування
+        .subtitle-text-20 Головне в житті зберігати баланс: комфортне місце, далеко від дисбалансу та крайнощів
+        a(href="#").btn.dark-btn-hover
+          span Дивитися сторінку
+
+  .divider
+    img(src="./assets/images/divider/3.jpg")
+  section.section-4.fields
+    .card-style.js-hover-card-animation3
+      .content
+        .dark-title Умови
+        .subtitle-text-20 Головне в житті зберігати баланс: комфортне місце, далеко від дисбалансу та крайнощів
+        a(href="#").btn.dark-btn-hover
+          span Дивитися сторінку
+    .card-style.js-hover-card-animation4
+      .content
+        .dark-title Забудовник
+        .subtitle-text-20 Головне в житті зберігати баланс: комфортне місце, далеко від дисбалансу та крайнощів
+        a(href="#").btn.dark-btn-hover
+          span Дивитися сторінку
+  .divider
+    img(src="./assets/images/divider/4.jpg")
+  section.section-5
+    .section-5-top
+      .dark-title Новини
+      a(href="#").btn-2.light-btn-hover
+        span Більше новин
+    .news-list
+      a(href="#").news-card.news
+        .img
+          img(src="./assets/images/news/1.jpg")
+        .news-card-info
+          .news-card-info-data 23/09/2021
+          .dark-text-20 старт будівництва
+      a(href="#").news-card.news
+        .img
+          img(src="./assets/images/news/2.jpg")
+        .news-card-info
+          .news-card-info-data 23/09/2021
+          .dark-text-20 старт продажів
+      a(href="#").news-card.action
+        .img
+          img(src="./assets/images/news/3.jpg")
+        .news-card-info
+          .news-card-info-data 23/09/2021
+          .dark-text-20 відкриття ОП
+
+  .divider
+    img(src="./assets/images/divider/5.jpg")
+  section.section-6.fields
+    .section-6-left
+      .dark-title Контакти
+      ul.section-6-left-info
+        li
+          a(href="#").dark-text-20.link-hover
+            span Croatia, AVTO ARAZI STR. #42
+        li
+         .dark-text-20.col
+            span Пн-Сб:	с 09:00 до 18:00
+            span Вс:  выходной
+        li
+          a(href="tel:+995322552277").dark-text-20.link-hover
+            span (+995) 32 255 22 77
+        li
+          a(href="mailto:sales@mediana.com").dark-text-20.link-hover
+            span SALES@mediana.com
+        li.row
+          a(href="#").dark-text-20.link-hover
+            span instagram
+          a(href="#").dark-text-20.link-hover
+            span facebook
+    .section-6-right.map
+      #map(width="930px" height="800px")
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

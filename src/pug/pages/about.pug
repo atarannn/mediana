@@ -1,0 +1,79 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'about'
+    var id_page = 'id-page-about'
+    var class_page = 'class-page-about'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Про проект',
+        link: pagesLink[0].about
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/sideform.js')
+  script(defer src='./assets/scripts/text-animation.js')
+block content
+  .page-wrapper
+    include ../components/breadcrumbs/breadcrumbs.pug
+  .about-top
+    .dark-title-2 головне в житті зберігати баланс: комфортне місце, далеко від дисбалансу та крайнощів:
+    ul.about-top-list
+      li
+        .text робота
+        img(src="./assets/images/about/1.jpg")
+        .text відпочинок
+      li
+        .text технології
+        img(src="./assets/images/about/2.jpg")
+        .text природа
+      li
+        .text Старий Загреб
+        img(src="./assets/images/about/3.jpg")
+        .text Новий Загреб
+      li
+        .text Велике місто
+        img(src="./assets/images/about/4.jpg")
+        .text Маленьке містечко
+  .about-img-block
+    img(src="./assets/images/about/logo-bg.jpg").img
+    img(src="./assets/images/about/logo.svg").svg
+
+  .about-cards-wrapper
+    .terms-card-wrapper
+      .terms-card.reverse
+        .terms-card-info
+          .dark-title-2 Чому mediana apartments:
+          .page-text Термін медіана - є в математиці, це число, яке є серединою множини чисел, половина чисел мають значення більше, ніж медіана, а половина менше. У геометрії це відрізок, що з'єднує вершину трикутника з серединою протилежної сторони. Наш проект – і є та ідеальна середина/баланс.
+        img(src="./assets/images/about/5.jpg")
+    .terms-card-wrapper
+      .terms-card
+        .terms-card-info
+          .dark-title-2 Архітектура
+          .page-text Додаємо характеру нашим будинкам та території, ми індивідуальні та маємо можливість відрізнятись! Унікальні матеріали оздоблення екстер’єрів, інтер’єрів, території. Тут ви вдома і будинок має ваш характер, дозвольте собі веселощі та відпочинок.
+        img(src="./assets/images/about/6.jpg")
+    .terms-card-wrapper
+      .terms-card.reverse
+        .terms-card-info
+          .dark-title-2 Локація
+          .page-text Ідеально збалансоване місце: поруч Загреб та центр міста Велика Гориця, поруч аеропорт та дорога що веде з міста до курортних міст минаючи усі затори. Навпроти супермаркети, аптеки, інфраструктура. Велика Гориця відзначається своєю спортивною інфраструктурою, тут багато спортивної інфраструктури та місць для тренувань. Ви можете обрати різні шкільні та дошкільні заклади для дітей, тут їх багато і все пішій доступності. Також поруч з будинком знаходіться 2 зупинки транспорту, що дозволяє швидко та зручно дістатися будь-яке місце в місті та поза ним.
+        img(src="./assets/images/about/7.jpg")
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

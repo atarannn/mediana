@@ -1,0 +1,91 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'characteristics'
+    var id_page = 'id-page-characteristics'
+    var class_page = 'class-page-characteristics'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Характеристики',
+        link: pagesLink[0].characteristics
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/sideform.js')
+  script(defer src='./assets/scripts/text-animation.js')
+block content
+  .page-wrapper
+    include ../components/breadcrumbs/breadcrumbs.pug
+  .characteristics
+    .dark-text-24 Будинок 1
+    .row
+      .characteristics-card
+        img(src="./assets/images/characteristics/1.svg")
+        .title Поверхів
+        .subtitle 5
+      .characteristics-card
+        img(src="./assets/images/characteristics/2.svg")
+        .title Квартир
+        .subtitle 22
+      .characteristics-card
+        img(src="./assets/images/characteristics/3.svg")
+        .title паркомісця
+        .subtitle 44
+      .characteristics-card
+        img(src="./assets/images/characteristics/4.svg")
+        .title висота стелі
+        .subtitle 2.7 м  (2,6 з штукатуркою)
+  .characteristics.margin-top
+    .dark-text-24 Будинок 2
+    .row
+      .characteristics-card
+        img(src="./assets/images/characteristics/1.svg")
+        .title Поверхів
+        .subtitle 5
+      .characteristics-card
+        img(src="./assets/images/characteristics/2.svg")
+        .title Квартир
+        .subtitle 22
+      .characteristics-card
+        img(src="./assets/images/characteristics/3.svg")
+        .title паркомісця
+        .subtitle 44
+      .characteristics-card
+        img(src="./assets/images/characteristics/4.svg")
+        .title висота стелі
+        .subtitle 2.7 м  (2,6 з штукатуркою)
+  .characteristics.characteristics-2.margin-top
+    .dark-text-24 Загальні
+    .row
+      .characteristics-card
+        img(src="./assets/images/characteristics/4.svg")
+        .title Балкони
+        .subtitle Скло, профіль
+      .characteristics-card
+        img(src="./assets/images/characteristics/5.svg")
+        .title Поштові скриньки
+        .subtitle Зовнішні
+      .characteristics-card
+        img(src="./assets/images/characteristics/6.svg")
+        .title Опалення
+        .subtitle Автономне
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

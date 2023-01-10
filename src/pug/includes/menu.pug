@@ -1,0 +1,60 @@
+-
+  var menu = [
+    ['Головна', 'index.html', 'Головна'],
+    ['Обрати квартиру', '#', 'Обрати квартиру'],
+    ['Про проект', 'about.html', 'Про проект'],
+    ['Характеристики', 'characteristics.html', 'Характеристики'],
+    ['Панорама', 'panorama.html', 'Панорама'],
+    ['Інфраструктура', 'infrastructure.html', 'Інфраструктура'],
+    ['Умови оплати', 'terms.html', 'Умови оплати'],
+    ['Хід будівництва', 'construction_progress.html', 'Хід будівництва'],
+    ['Веб-камери', 'web-camera.html', 'Веб-камери'],
+    ['Документація', 'documents.html', 'Документація'],
+    ['Забудовник', 'developer.html', 'Забудовник'],
+    ['Контакти', 'contacts.html', 'Контакти'],
+    ['Акції та новини', 'news.html', 'Акції та новини'],
+  ]
+
+.menu(data-menu)
+  .menu-close-wrapper(data-close-menu)
+    .menu-close
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15 15L1 1M1 15L15 1L1 15Z" stroke-width="2"/>
+      </svg>
+  .menu-container
+    ul.menu-list
+      each el in menu
+        li(data-animation)
+          a(href=el[1] data-text=el[2]).cubic-hover
+            span=el[0]
+    .menu-right
+      .menu-right-top
+        img(src="./assets/images/menu/1.jpg", alt="")
+        .menu-right-top-info
+          a(href="mailto:sales@mediana.com").dark-text-20.link-hover
+            span SALES@mediana.com
+          a(href="#").dark-text-20.link-hover
+            span Croatia, AVTO ARAZI STR. #42
+          .row
+            a(href="#").dark-text-20.link-hover
+              span instagram
+            a(href="#").dark-text-20.link-hover
+              span facebook
+          .row
+            .col
+              a(href="tel:+995322552277").dark-text-20.link-hover
+                span (+995) 32 255 22 77
+              a(href="tel:+995322552277").dark-text-20.link-hover
+                span (+995) 32 255 22 77
+              a(href="tel:+995322552277").dark-text-20.link-hover
+                span (+995) 32 255 22 77
+            .col
+              a(href="tel:+995322552277").dark-text-20.link-hover
+                span (+995) 32 255 22 77
+              a(href="tel:+995322552277").dark-text-20.link-hover
+                span (+995) 32 255 22 77
+      .menu-right-bottom
+        img(src="./assets/images/menu/2.jpg", alt="")
+
+
+

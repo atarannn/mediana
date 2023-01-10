@@ -1,0 +1,117 @@
+.news-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  .filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--breadcrumbs-offset);
+    &-btn {
+      height: 50px;
+      width: 125px;
+      border: 1px solid $bc;
+      color: $bc;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include font-regular;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+      @include to(1440px) {
+        width: 100px;
+        height: 40px;
+      }
+      &.active {
+        background: $bc;
+        color: $wc;
+      }
+    }
+  }
+  .news-card-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--field);
+    @include to(1024px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include to(680px) {
+      grid-template-columns: 1fr;
+    }
+    .news-card {
+      &.hide {
+        display: none;
+      }
+    }
+  }
+}
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--field);
+  @include to(1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+.news-card {
+  border: 1px solid #BBBBBB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  @include from(1023px) {
+    &:hover {
+      .img {
+        img {
+          transform: scale(1.1);
+          transition: transform .3s ease-in-out;
+        }
+      }
+    }
+  }
+  .img {
+    height: 347px;
+    width: 100%;
+    overflow: hidden;
+    @include to(1440px) {
+      height: 280px;
+    }
+    @include to(680px) {
+      height: 180px;
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      transition: transform .3s ease-in-out;
+    }
+  }
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--blocks-offset-50);
+    min-height: 160px;
+    width: 100%;
+    gap: var(--blocks-offset-20);
+    @include to(1440px) {
+      min-height: 130px;
+    }
+    @include to(680px) {
+      min-height: 100px;
+    }
+    .news-card-info-data {
+      @include font-medium;
+      font-size: var(--font16);
+      color: #919191;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+      line-height: 100%;
+    }
+  }
+}

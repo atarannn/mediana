@@ -1,0 +1,62 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'terms'
+    var id_page = 'id-page-terms'
+    var class_page = 'class-page-terms'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Умови оплати',
+        link: pagesLink[0].terms
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/sideform.js')
+  script(defer src='./assets/scripts/text-animation.js')
+
+block content
+  .page-wrapper
+    include ../components/breadcrumbs/breadcrumbs.pug
+    .terms-title.dark-text-24 ми передбачили різі зручні умови для купівлі житла, завжди допоможемо підібрати те що зручно саме вам
+  .terms-card-wrapper
+    .terms-card
+      .terms-card-info
+        .dark-title-2 Повна оплата
+        .page-text Ви можете внести 100% оплату за нерухомість, та отримати додаткову знижку, що зробить придбання ще приємнішим.
+      img(src="./assets/images/terms/1.jpg")
+  .terms-divider
+    img(src="./assets/images/divider/5.jpg")
+  .terms-card-wrapper
+    .terms-card.reverse
+      .terms-card-info
+        .dark-title-2 Розстрочка
+        .page-text Ми маємо спеціальні умови розтермінування від забудовника залежно від першого внеску, мінімальний перший внесок від 30%. Більше деталей та прорахунків можна дізнатися у нашого менеджера.
+      img(src="./assets/images/terms/2.jpg")
+  .terms-divider
+    img(src="./assets/images/divider/6.jpg")
+  .terms-card-wrapper
+    .terms-card
+      .terms-card-info
+        .dark-title-2 Кредит
+        .page-text Ми подбали про різні умови купівлі, та співпрацюємо з банками ххххх, де ми пройшли акредитацію та можна отримати кредит на житло.
+      img(src="./assets/images/terms/3.jpg")
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

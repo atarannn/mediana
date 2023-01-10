@@ -1,0 +1,50 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'developer'
+    var id_page = 'id-page-developer'
+    var class_page = 'class-page-developer'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Забудовник',
+        link: pagesLink[0].developer
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/sideform.js')
+  script(defer src='./assets/scripts/text-animation.js')
+
+block content
+  .page-wrapper
+    include ../components/breadcrumbs/breadcrumbs.pug
+    .developer
+      .developer-left
+        img(src="./assets/images/developer/logo.svg")
+        a(href="#").btn.dark-btn-hover
+          span Сайт забудовника
+      .developer-right
+        .dark-text-24 Наша компанія створює новий формат міського середовища.
+        .page-text Новий амбіційний проект з крутою командою, що давно працює над різними проектами в нерухомості. Тому проекти забудовника будуть точно відрізнятись індивідуальністю, смаком, якістю та підходом до реалізації проекту.
+  .developer-divider
+    img(src="./assets/images/divider/1.jpg")
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

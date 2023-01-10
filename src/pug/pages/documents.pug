@@ -1,0 +1,106 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'documents'
+    var id_page = 'id-page-documents'
+    var class_page = 'class-page-documents'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Документація',
+        link: pagesLink[0].documents
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/sideform.js')
+  script(defer src='./assets/scripts/text-animation.js')
+
+block content
+  .page-wrapper
+    include ../components/breadcrumbs/breadcrumbs.pug
+    .documents
+      a(href="#").documents-card
+        .documents-card-top
+          .row
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#4D4D4C" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 3.39993V6.99993L9.4 8.19993" stroke="#4D4D4C" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            .text 10.12.2020
+          .row
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 1V8M6 8L8 6M6 8L4 6M3 11H9" stroke="#4D4D4C" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            .text 0.4 мб
+        .documents-card-bottom
+          img(src="./assets/images/documents/1.svg")
+          .subtitle-text-20 Лiцензiя Г. П. Командор ( повiдомлення, перелiк робiт, Витяг iз сайту ДАБI )
+      a(href="#").documents-card
+        .documents-card-top
+          .row
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#4D4D4C" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 3.39993V6.99993L9.4 8.19993" stroke="#4D4D4C" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            .text 10.12.2020
+          .row
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 1V8M6 8L8 6M6 8L4 6M3 11H9" stroke="#4D4D4C" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            .text 0.4 мб
+        .documents-card-bottom
+          img(src="./assets/images/documents/2.svg")
+          .subtitle-text-20 Договір оренди земельної ділянки від 12.06.2020р
+      a(href="#").documents-card
+        .documents-card-top
+          .row
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#4D4D4C" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 3.39993V6.99993L9.4 8.19993" stroke="#4D4D4C" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            .text 10.12.2020
+          .row
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 1V8M6 8L8 6M6 8L4 6M3 11H9" stroke="#4D4D4C" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            .text 0.4 мб
+        .documents-card-bottom
+          img(src="./assets/images/documents/3.svg")
+          .subtitle-text-20 Экспертиза проєкту
+      a(href="#").documents-card
+        .documents-card-top
+          .row
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#4D4D4C" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 3.39993V6.99993L9.4 8.19993" stroke="#4D4D4C" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            .text 10.12.2020
+          .row
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 1V8M6 8L8 6M6 8L4 6M3 11H9" stroke="#4D4D4C" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            .text 0.4 мб
+        .documents-card-bottom
+          img(src="./assets/images/documents/4.svg")
+          .subtitle-text-20 2020-11-26 ГП Цедика 14А Стадия П - КОРРЕКТ-2 ГП
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

@@ -1,0 +1,63 @@
+.preloader {
+  z-index: 100000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  pointer-events: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: $wc;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+  opacity: 1;
+  cursor: none;
+  transition: opacity 2s ease-in-out, visibility 3s ease-in-out;
+}
+
+.preloader__image {
+  animation: pulse 2s linear infinite;
+  height: auto;
+  width: 300px;
+}
+
+@media screen and (max-width: 680px) {
+  .preloader__image {
+    width: 150px;
+  }
+}
+
+.loaded_hiding .preloader {
+  visibility: hidden;
+  transition: 1s visibility;
+}
+
+.loaded .preloader{
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 2s ease-in-out, visibility 3s ease-in-out;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.2, 1.2, 1.2);
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}

@@ -1,0 +1,71 @@
+.lang-block {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  @include to(1024px) {
+    width: auto;
+    height: auto;
+  }
+  &:after {
+    content: url(../images/icons/arrow-lang.svg);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all .3s ease-in-out;
+    transform: rotate(0deg);
+    @include to(1024px) {
+      content: none;
+    }
+  }
+  li {
+    list-style: none;
+    height: 20px;
+    transition: opacity 0.1s linear;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    @include to(1024px) {
+      height: auto;
+      opacity: 1;
+    }
+    a {
+      text-decoration: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all .3s ease-in-out;
+      @include from(1023px) {
+        &:hover {
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+    &.active {
+      opacity: 1;
+      @include to(1024px) {
+        a {
+          color: $green;
+          pointer-events: none;
+        }
+      }
+      &:hover {
+        li {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &:hover {
+    li {
+      opacity: 1;
+    }
+    &:after{
+      transform: rotate(180deg);
+      transition: all .3s ease-in-out;
+      top: 0;
+    }
+  }
+}

@@ -1,0 +1,153 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'construction_progress'
+    var id_page = 'id-page-construction_progress'
+    var class_page = 'class-page-construction_progress'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Хід будівництва',
+        link: pagesLink[0].construction_progress
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/sideform.js')
+  script(defer src='./assets/scripts/text-animation.js')
+  script(defer src='./assets/scripts/construction_progress.js')
+block content
+  .page-wrapper
+    include ../components/breadcrumbs/breadcrumbs.pug
+    .construction_progress-top
+      .construction_progress-top-left
+        .title-wrapper
+          .dark-text-24 Статус робіт:
+        .page-text Монтаж ліфтів Продовжується влаштування систем опалення, вентиляції, водопроводу, каналізації та електрики. Проходять фасадні роботи на торцях. Влаштування утеплення на балконах.
+      ul.construction_progress-top-right.progress-list
+        li
+          .persent-wrapper
+            <svg viewBox="0 0 130 130" version="1.1"xmlns="http://www.w3.org/2000/svg" >
+              <circle class="class-74" cx="65" cy="65" r="65"/>
+            </svg>
+            span 74%
+          span.text Строительство
+        li
+          .persent-wrapper
+            <svg viewBox="0 0 130 130" version="1.1"xmlns="http://www.w3.org/2000/svg" >
+            <circle class="class-62" cx="65" cy="65" r="65"/>
+            </svg>
+            span 62%
+          span.text Благоустройство
+        li
+          .persent-wrapper
+            <svg viewBox="0 0 130 130" version="1.1"xmlns="http://www.w3.org/2000/svg" >
+            <circle class="class-25" cx="65" cy="65" r="65"/>
+            </svg>
+            span 25%
+          span.text Фасад
+        li
+          .persent-wrapper
+            <svg viewBox="0 0 130 130" version="1.1"xmlns="http://www.w3.org/2000/svg" >
+            <circle class="class-17" cx="65" cy="65" r="65"/>
+            </svg>
+            span 17%
+          span.text Сети
+
+    ul.construction_progress-list
+      li.construction_progress-card(data-open-construction-progress)
+        .left
+          .date
+            .dark-title(data-day) 25
+            .col
+              .dark-text-24(data-month)  Август
+              .text(data-year) 2022
+          .page-text(data-test) Монтаж лифтов. Продолжается устройство систем отопления, вентиляции, водопровода, канализации и электричества. Проходят фасадные работы на торцах. Устройство утепления на балконах.
+          .bottom
+            .text
+              p(data-photo) 14
+              | фото
+            .text
+              p(data-video) 1
+              | видео
+        .right
+          img(data-img src="./assets/images/construction-progress/1.jpg").img
+      li.construction_progress-card(data-open-construction-progress)
+        .left
+          .date
+            .dark-title(data-day) 25
+            .col
+              .dark-text-24(data-month)  Август
+              .text(data-year) 2022
+          .page-text(data-test) Монтаж лифтов. Продолжается устройство систем отопления, вентиляции, водопровода, канализации и электричества. Проходят фасадные работы на торцах. Устройство утепления на балконах.
+          .bottom
+            .text
+              p(data-photo) 14
+              | фото
+            .text
+              p(data-video) 1
+              | видео
+        .right
+          img(data-img src="./assets/images/construction-progress/1.jpg").img
+
+  .construction_progress-popup-wrapper(data-construction-progress)
+    .construction_progress-popup
+      .swiper
+        .swiper-wrapper
+          .swiper-slide
+            .left
+              .date
+                .dark-title(data-day) 25
+                .col
+                  .dark-text-24(data-month)  Август
+                  .text(data-year) 2022
+              .page-text(data-test) Монтаж лифтов. Продолжается устройство систем отопления, вентиляции, водопровода, канализации и электричества. Проходят фасадные работы на торцах. Устройство утепления на балконах.
+            .right
+              img(src="./assets/images/construction-progress/1.jpg", alt="")
+          .swiper-slide
+            .left
+              .date
+                .dark-title(data-day) 25
+                .col
+                  .dark-text-24(data-month)  Август
+                  .text(data-year) 2022
+              .page-text(data-test) Монтаж лифтов. Продолжается устройство систем отопления, вентиляции, водопровода, канализации и электричества. Проходят фасадные работы на торцах. Устройство утепления на балконах.
+            .right
+              img(src="./assets/images/construction-progress/1.jpg", alt="")
+
+        .swiper-pagination.swiper-pagination
+        .swiper-button
+          .swiper-left(data-swiper-prev)
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 11.5554L2 11.5554M2 11.5554L12 1.00027M2 11.5554L12 21" stroke-width="2"/>
+            </svg>
+          .swiper-right(data-swiper-next)
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M-4.12836e-07 10.4446L20 10.4446M20 10.4446L10 20.9997M20 10.4446L10 1" stroke-width="2"/>
+            </svg>
+        .btn-close-wrapper
+          .btn-close(type="button" data-close-construction-progress)
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 13L1 1M1 13L13 1L1 13Z" stroke-width="2"/>
+            </svg>
+
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

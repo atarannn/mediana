@@ -1,0 +1,79 @@
+.characteristics {
+  padding: 0 var(--field);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  &.margin-top {
+    margin-top: var(--breadcrumbs-offset);
+  }
+  .dark-text-24 {
+    margin-bottom: var(--blocks-offset-20);
+  }
+  .row {
+    display: grid;
+    gap: var(--field);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    @include to(1024px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include to(680px) {
+      grid-template-columns: 1fr;
+    }
+    .characteristics-card {
+      height: 220px;
+      border: 1px solid #BBBBBB;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--blocks-offset-20);
+      @include to(1440px) {
+        height: 180px;
+      }
+      @include to(680px) {
+        height: 150px;
+      }
+      img {
+        height: 30px;
+        object-fit: contain;
+      }
+      .title {
+        color: $bc;
+        @include font-regular;
+        text-transform: uppercase;
+        font-size: var(--font24);
+        line-height: 90%;
+        letter-spacing: -0.05em;
+      }
+      .subtitle {
+        color: $grey;
+        @include font-regular;
+        text-transform: none;
+        font-size: var(--font20);
+        line-height: 120%;
+        letter-spacing: -0.05em;
+      }
+    }
+  }
+}
+
+.characteristics.characteristics-2 {
+  .row-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    @include to(680px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .row-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: var(--field);
+    @include to(1024px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include to(680px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

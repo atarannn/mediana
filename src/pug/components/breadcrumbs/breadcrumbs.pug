@@ -1,0 +1,13 @@
+.breadcrumbs-wrapper
+  ul.breadcrumbs
+    li.breadcrumbs-item
+      a(href="index.html") головна
+    svg(width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg")
+      circle(cx="2.5" cy="3" r="2.5" fill="#221C35")
+    if breadcrumbsSubitem
+      each v in breadcrumbsSubitem
+        li.breadcrumbs-item.breadcrumbs-item__current= v.label
+  if breadcrumbsSubitem
+    each v in breadcrumbsSubitem
+      .dark-title= v.label
+

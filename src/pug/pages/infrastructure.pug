@@ -1,0 +1,106 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'infrastructure'
+    var id_page = 'id-page-infrastructure'
+    var class_page = 'class-page-infrastructure'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Инфраструктура',
+        link: pagesLink[0].infrastructure
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/map.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/sideform.js')
+  script(defer src='./assets/scripts/text-animation.js')
+
+block content
+  .page-wrapper
+    include ../components/breadcrumbs/breadcrumbs.pug
+  .infractructure-info
+    .dark-title-2 Внутрішня
+    .infractructure-block.big
+      .infractructure-block-top
+        .dark-text-24 квартири з терасами
+        .page-text Доступна унікальна серія квартир з великими терасами що підійдуть для великих родин чи людей які люблять проводити час з друзями: ви можете обладнати терасу на власний смак: гойдалка для дітей, затишний куточок для вечері з родиною чи друзями, багато зелені та романтичне освітлення. І все це прямо в вашій квартирі.
+      img(src="./assets/images/infrastructure/1.jpg")
+  .infractructure-divider
+    img(src="./assets/images/divider/3.jpg")
+  .infractructure-info
+    .infractructure-row
+      .infractructure-block.small
+        .infractructure-block-top
+          .dark-text-24 дитячий майданчик
+          .page-text Ми передбачили зони для розваг діток, тут буде зручно проводити час в дитячих забавах дітям, та відпочивати батькам та дорослим.
+        img(src="./assets/images/infrastructure/2.jpg")
+      .infractructure-block.small
+        .infractructure-block-top
+          .dark-text-24 Охорона
+          .page-text Територія буде обладнана камерами відео нагляду, для безпеки території та вашого майна.
+        img(src="./assets/images/infrastructure/3.jpg")
+  .infractructure-divider
+    img(src="./assets/images/divider/5.jpg")
+  .infractructure-info
+    .infractructure-block.big
+      .infractructure-block-top
+        .dark-text-24 Безпека
+        .page-text Безпека  та закрита територія одна з речей що додає вагомості при обранні квартири, до кожного з будинків буде обладнано власний заїд, що дозволить розвести транспорт та забезпечить відсутність скупчення машин. Проте залишить територію спільною.
+      img(src="./assets/images/infrastructure/4.jpg")
+  .infractructure-divider
+    img(src="./assets/images/divider/4.jpg")
+  .infractructure-info
+    .infractructure-row
+      .infractructure-block.small
+        .infractructure-block-top
+          .dark-text-24 паркінг
+          .page-text Ми маємо різні варіанти паркінгу: відкритий та закритий, ніякого хаотичного паркування та безладу, тільки заплановані місця та порядок, що дозволяє людям комфортно проводити час з сім’єю та вдома замість пошуку парко-місця.
+        img(src="./assets/images/infrastructure/5.jpg")
+      .infractructure-block.small
+        .infractructure-block-top
+          .dark-text-24 благоустрій
+          .page-text Ми подбали про продуману та збалансовану територію, де усім буде комфортно, безпечно та гарно, квартира це не тільки те що знаходиться за вашими стінами, це також те що вас оточує та робить життя комфортнішим.
+        img(src="./assets/images/infrastructure/6.jpg")
+  .infractructure-divider
+    img(src="./assets/images/divider/1.jpg")
+  .infractructure-info
+    .infractructure-block.big
+      .infractructure-block-top
+        .dark-text-24 Сучасні МОП
+        .page-text Усе буде виконано по індивідуальному замовленню та в стилі комплексу, дизайнерське оздоблення, якісні ліфти та холи. Тепло дому ви відчуватимете вже від заїду на територію.
+      img(src="./assets/images/infrastructure/4.jpg")
+  .infractructure-divider-2
+    img(src="./assets/images/divider/2.jpg")
+  .infractructure-info
+    .dark-title-2 Зовнішня
+  .map-main
+    .map-wrapper
+      #map.map
+    .map-navigation
+      .map-navigation__header Інфраструктура
+      .map-navigation__wrap
+        .map-navigation__main
+        .map-navigation__markers-wrap
+          .map-navigation__markers
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

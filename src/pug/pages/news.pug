@@ -1,0 +1,65 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'news'
+    var id_page = 'id-page-news'
+    var class_page = 'class-page-news'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Акції та новини',
+        link: pagesLink[0].news
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/sideform.js')
+  script(defer src='./assets/scripts/text-animation.js')
+  script(defer src='./assets/scripts/news.js')
+
+block content
+  .page-wrapper
+    include ../components/breadcrumbs/breadcrumbs.pug
+    .news-wrapper
+      .filter
+        button(data-view="all").filter-btn.active Всі
+        button(data-view="action").filter-btn Акції
+        button(data-view="news").filter-btn Новини
+      .news-card-list
+        a(href="news-page.html").news-card.news
+          .img
+            img(src="./assets/images/news/1.jpg")
+          .news-card-info
+            .news-card-info-data 23/09/2021
+            .dark-text-20 Встигніть здійснити бажання про власне житло! Продаж квартир у нашому жк відкрито!
+        a(href="#").news-card.news
+          .img
+            img(src="./assets/images/news/2.jpg")
+          .news-card-info
+            .news-card-info-data 23/09/2021
+            .dark-text-20 Графік роботи відділу продажу на свята! встигніть прибати квартиру до нового року
+        a(href="#").news-card.action
+          .img
+            img(src="./assets/images/news/3.jpg")
+          .news-card-info
+            .news-card-info-data 23/09/2021
+            .dark-text-20 Графік роботи відділу продажу на свята! встигніть прибати квартиру до нового року
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

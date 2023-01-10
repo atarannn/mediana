@@ -1,0 +1,44 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'panorama'
+    var id_page = 'id-page-panorama'
+    var class_page = 'class-page-panorama'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Панорама',
+        link: pagesLink[0].panorama
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/sideform.js')
+  script(defer src='./assets/scripts/text-animation.js')
+  script(defer src='./assets/scripts/panorama.js')
+
+block content
+  .page-wrapper
+    include ../components/breadcrumbs/breadcrumbs.pug
+  .panorama(data-panorama-wrapper)
+    iframe(data-panorama src="../../assets/images/home/section-1/1.jpg" preload="none" autoplay="false" muted="" loop="" playsinline="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+    .panorama__faq(data-panorama-faq)
+      img(src="./assets/images/panorama/cursor.svg")
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

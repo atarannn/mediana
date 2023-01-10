@@ -1,0 +1,57 @@
+.documents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--field);
+  width: 100%;
+  @include to(1440px) {
+    grid-template-columns: 1fr;
+  }
+  &-card {
+    background: #FFFFFF;
+    padding: var(--blocks-offset-40);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 230px;
+    gap: var(--blocks-offset-20);
+    @include to(1440px) {
+      height: 180px;
+    }
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        .text {
+          text-transform: uppercase;
+        }
+      }
+    }
+    &-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: var(--blocks-offset-20);
+      width: 100%;
+      img {
+        height: auto;
+        width: 90px;
+        object-fit: contain;
+        object-position: left;
+        @include to(1440px) {
+          height: 70px;
+        }
+        @include to(1024px) {
+          height: 100px;
+        }
+      }
+    }
+  }
+}
