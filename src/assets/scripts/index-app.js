@@ -17,6 +17,7 @@ const isDev = document.documentElement.dataset.mode === 'dev';
 var myAnimation = new hoverEffect({
   parent: document.querySelector('.js-hover-card-animation'),
   intensity: 0.3,
+  imagesRatio: 0.85,
   image1: isDev ? './assets/images/home/section-2/1.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/1.jpg',
   image2: isDev ? './assets/images/home/section-2/1-2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/1-2.jpg',
   displacementImage: isDev ? './assets/images/home/section-2/1-2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/1-2.jpg'
@@ -25,6 +26,7 @@ var myAnimation = new hoverEffect({
 var myAnimation2 = new hoverEffect({
   parent: document.querySelector('.js-hover-card-animation2'),
   intensity: 0.3,
+  imagesRatio: 0.85,
   image1: isDev ? './assets/images/home/section-2/2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/2.jpg',
   image2: isDev ? './assets/images/home/section-2/2-2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/2-2.jpg',
   displacementImage: isDev ? './assets/images/home/section-2/2-2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/2-2.jpg'
@@ -33,6 +35,7 @@ var myAnimation2 = new hoverEffect({
 var myAnimation3 = new hoverEffect({
   parent: document.querySelector('.js-hover-card-animation3'),
   intensity: 0.3,
+  imagesRatio: 0.85,
   image1: isDev ? './assets/images/home/section-4/1.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-4/1.jpg',
   image2: isDev ? './assets/images/home/section-4/1-2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-4/1-2.jpg',
   displacementImage: isDev ? './assets/images/home/section-4/1-2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-4/1-2.jpg'
@@ -41,6 +44,7 @@ var myAnimation3 = new hoverEffect({
 var myAnimation4 = new hoverEffect({
   parent: document.querySelector('.js-hover-card-animation4'),
   intensity: 0.3,
+  imagesRatio: 0.85,
   image1: isDev ? './assets/images/home/section-4/2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-4/2.jpg',
   image2: isDev ? './assets/images/home/section-4/2-2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-4/2-2.jpg',
   displacementImage: isDev ? './assets/images/home/section-4/2-2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-4/2-2.jpg'
