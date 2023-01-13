@@ -56,17 +56,21 @@
         .swiper-slide__link {
           display: flex;
           align-items: center;
-          justify-content: flex-start;
-          gap: 20px;
+          justify-content: center;
+          gap: 12px;
           svg {
-            fill: $orange;
-            height: 20px;
+            fill: $wc;
+            height: 16px;
             @include to(1440px) {
-              height: 16px;
-            }
-            @include to(680px) {
               height: 12px;
             }
+            @include to(680px) {
+              height: 10px;
+            }
+          }
+          &:before {
+            background: $orange;
+            z-index: -1;
           }
         }
       }
