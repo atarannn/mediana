@@ -40,7 +40,7 @@ const lang = langDetect();
           connectionFailed: 'Ошибка соединения с CRM',
         },
       },
-      uk: {
+      hr: {
         translation: {
           name: 'Ім’я:*',
           phone: 'Телефон:*',

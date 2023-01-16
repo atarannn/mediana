@@ -17,5 +17,5 @@ export const langDetect = () => {
   if (window.location.pathname.match(/\/en\//)) {
     return 'en';
   }
-  return 'ru';
+  return 'hr';
 };
