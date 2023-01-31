@@ -18,20 +18,20 @@ const isMobile = window.matchMedia('(max-width: 1024px)').matches;
 
 const section2FirstBlockImage =  {
   dev: () => isMobile ? './assets/images/home/section-2/1-mobile.jpg' : './assets/images/home/section-2/1.jpg',
-  prod: () => isMobile ? 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/1-mobile.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/1.jpg',
+  prod: () => isMobile ? '/wp-content/themes/3d/assets/images/home/section-2/1-mobile.jpg' : '/wp-content/themes/3d/assets/images/home/section-2/1.jpg',
 }
 var myAnimation = new hoverEffect({
   parent: document.querySelector('.js-hover-card-animation'),
   intensity: 0.3,
   imagesRatio: 0.85,
   image1: isDev ? section2FirstBlockImage.dev() : section2FirstBlockImage.prod(),
-  image2: isDev ? './assets/images/home/section-2/1-2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/1-2.jpg',
-  displacementImage: isDev ? './assets/images/home/section-2/1-2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/1-2.jpg'
+  image2: isDev ? './assets/images/home/section-2/1-2.jpg' : '/wp-content/themes/3d/assets/images/home/section-2/1-2.jpg',
+  displacementImage: isDev ? './assets/images/home/section-2/1-2.jpg' : '/wp-content/themes/3d/assets/images/home/section-2/1-2.jpg'
 });
 
 const section2SecondBlockImage =  {
   dev: () => isMobile ? './assets/images/home/section-2/2-mobile.jpg' : './assets/images/home/section-2/2.jpg',
-  prod: () => isMobile ? 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/2-mobile.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/2.jpg',
+  prod: () => isMobile ? '/wp-content/themes/3d/assets/images/home/section-2/2-mobile.jpg' : '/wp-content/themes/3d/assets/images/home/section-2/2.jpg',
 }
 
 var myAnimation2 = new hoverEffect({
@@ -39,26 +39,26 @@ var myAnimation2 = new hoverEffect({
   intensity: 0.3,
   imagesRatio: 0.85,
   image1: isDev ? section2SecondBlockImage.dev() : section2SecondBlockImage.prod(),
-  image2: isDev ? './assets/images/home/section-2/2-2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/2-2.jpg',
-  displacementImage: isDev ? './assets/images/home/section-2/2-2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/2-2.jpg'
+  image2: isDev ? './assets/images/home/section-2/2-2.jpg' : '/wp-content/themes/3d/assets/images/home/section-2/2-2.jpg',
+  displacementImage: isDev ? './assets/images/home/section-2/2-2.jpg' : '/wp-content/themes/3d/assets/images/home/section-2/2-2.jpg'
 });
 
 var myAnimation3 = new hoverEffect({
   parent: document.querySelector('.js-hover-card-animation3'),
   intensity: 0.3,
   imagesRatio: 0.85,
-  image1: isDev ? './assets/images/home/section-4/1.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-4/1.jpg',
-  image2: isDev ? './assets/images/home/section-4/1-2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-4/1-2.jpg',
-  displacementImage: isDev ? './assets/images/home/section-4/1-2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-4/1-2.jpg'
+  image1: isDev ? './assets/images/home/section-4/1.jpg' : '/wp-content/themes/3d/assets/images/home/section-4/1.jpg',
+  image2: isDev ? './assets/images/home/section-4/1-2.jpg' : '/wp-content/themes/3d/assets/images/home/section-4/1-2.jpg',
+  displacementImage: isDev ? './assets/images/home/section-4/1-2.jpg' : '/wp-content/themes/3d/assets/images/home/section-4/1-2.jpg'
 });
 
 var myAnimation4 = new hoverEffect({
   parent: document.querySelector('.js-hover-card-animation4'),
   intensity: 0.3,
   imagesRatio: 0.85,
-  image1: isDev ? './assets/images/home/section-4/2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-4/2.jpg',
-  image2: isDev ? './assets/images/home/section-4/2-2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-4/2-2.jpg',
-  displacementImage: isDev ? './assets/images/home/section-4/2-2.jpg' : 'https://mediand-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-4/2-2.jpg'
+  image1: isDev ? './assets/images/home/section-4/2.jpg' : '/wp-content/themes/3d/assets/images/home/section-4/2.jpg',
+  image2: isDev ? './assets/images/home/section-4/2-2.jpg' : '/wp-content/themes/3d/assets/images/home/section-4/2-2.jpg',
+  displacementImage: isDev ? './assets/images/home/section-4/2-2.jpg' : '/wp-content/themes/3d/assets/images/home/section-4/2-2.jpg'
 });
 
 const form = [
